@@ -6,7 +6,7 @@
 1.	Crear un ambiente virtual en el directorio deseado  
 ```bash
 $ virtualenv flask_environment
-```
+```  
 Se creará un directorio con el nombre flask_environment  
 2.	Para activar el ambiete ejecutar el comando
 ```bash
