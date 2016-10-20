@@ -13,8 +13,9 @@ Se creará un directorio con el nombre flask_environment
 $ . /flask_environment/bin/activate```
 
 3.  Instalar Flask con el ambiente activo:
-    ```bash
-    (flask_environment) $ pip install Flask```
+```bash
+     (flask_environment) $ pip install Flask
+```
 4.	He decidido desplegar mi servicio en el puerto 6969, por tanto se debe modificar el archivo iptables. Para ello, ejecutar:
 ```bash
 vi /etc/sysconfig/iptables.```
@@ -108,7 +109,8 @@ def get_recientes():
 
 Por ultimo, ejecutar el archivo __python.py__ y el servicio estará listo para responder a las peticiones que se hagan desde POSTMAN. LAs capturas de pantalla que muestran este servicio web en funcionamiento se muestran a continuación.
 ```bash  
-(flask_environment) $ python python.py ```
+(flask_environment) $ python python.py 
+```
 
 
 ![alt text](https://s9.postimg.org/gxmgya1hb/listar.png "Listar todos los archivos")
