@@ -10,23 +10,24 @@ $ virtualenv flask_environment
 Se creará un directorio con el nombre flask_environment  
 2.	Para activar el ambiete ejecutar el comando
 ```bash
-$ . /flask_environment/bin/activate```
-
+$ . /flask_environment/bin/activate
+```
 3.  Instalar Flask con el ambiente activo:
 ```bash
      (flask_environment) $ pip install Flask
 ```
 4.	He decidido desplegar mi servicio en el puerto 6969, por tanto se debe modificar el archivo iptables. Para ello, ejecutar:
 ```bash
-vi /etc/sysconfig/iptables.```
+vi /etc/sysconfig/iptables.
+```
   Cuando se muestre el contenido de iptables se debe añadir la línea:  
   `-A INPUT -p tcp -m state --state NEW -m tcp --dport 6969 -j ACCEPT`  
   Es importante añadirla antes de la línea que contiene:  
   `-A INPUT -j REJECT --reject-with icmp-host-prohibited`
-
 5.  Se debe reiniciar el servicio iptables  
 ```bash  
-$ service iptables restart ```  
+$ service iptables restart 
+```  
 6.  Para desplegar el servicio web para las URI __/files__ y __/files/recently_created___, crer un archivo *.py que soporte las peticiones HTTP que se requieren: __POST, GET__ y __DELETE__.
 
   El archivo __python.py__ que adjunto permite: listar todos los archivos, borrar todos los archivos y crear un nuevo archivo en el directorio __/home/filesystem_user/files/__
