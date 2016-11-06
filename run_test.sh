@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -e 
+
 . ~/.virtualenvs/parcial2/bin/activate
-cd ~/
-mkdir funciona
+
+PYTHONPATH=. py.test --junitxml=python_tests.xml
