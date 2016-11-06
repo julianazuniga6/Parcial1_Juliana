@@ -20,6 +20,7 @@ class TestLiveServer:
         assert live_server.url() == 'http://localhost:%d' % live_server.port
         assert live_server.url('/ping') == 'http://localhost:%d/ping' % live_server.port
 
+<<<<<<< HEAD
     def test_server_listening(self, live_server):
         res = urlopen(live_server.url('/ping'))
         assert res.code == 200
@@ -77,5 +78,15 @@ class TestLiveServer:
         result = appdir.runpytest('-v', '--no-start-live-server')
         result.stdout.fnmatch_lines(['*PASSED*'])
         assert result.ret == 0
+=======
+def test_crear():
+	request.post(api_url, headers={'filename': 'content'}, data=json.dumps({'archivo': 'funciona'}))
+    	assert crear() == 201
+#def func(x):
+#    return x + 1
+#
+#def test_answer():
+#    assert func(4) == 5
+>>>>>>> f1af574abe02477b71603860ad3279d427681a1d
 
 
