@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 
 api_url = '/files'
-request.post(api_url, headers={'filename': 'content'}, data=json.dumps({'archivo': 'funciona'})
 
 
 #def func(x):
@@ -15,6 +14,7 @@ request.post(api_url, headers={'filename': 'content'}, data=json.dumps({'archivo
 #    assert func(3) == 5
 
 def test_crear():
+	request.post(api_url, headers={'filename': 'content'}, data=json.dumps({'archivo': 'funciona'}))
     assert crear()== 201
 #def func(x):
 #    return x + 1
