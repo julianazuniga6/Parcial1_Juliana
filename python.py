@@ -15,7 +15,8 @@ def crear():
   if not nombre:
    return "no es posible crear el archivo", 400
   else:
-    return resp, 201
+    #return resp, 201
+    return 201
 
 
 @app.route(api_url,methods=['GET'])
