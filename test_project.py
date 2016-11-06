@@ -13,13 +13,10 @@ app.test_request_context('/?filename=Pete&content=estavainafunciona')
 
 def test_crear():
     assert crear()== 201
-=======
 #def func(x):
 #    return x + 1
 #
 #def test_answer():
 #    assert func(4) == 5
 
-def test_crear():
-    assert crear()== 400
->>>>>>> c090a33cfa8ac003cd7108b878a029ccf95989eb
+
