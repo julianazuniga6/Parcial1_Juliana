@@ -1,7 +1,6 @@
 from python import crear, listado, eliminar_files, listar_recientes
 import flask
 
-<<<<<<< HEAD
 app = Flask(__name__)
 app.test_request_context('/?filename=Pete&content=estavainafunciona')
 
