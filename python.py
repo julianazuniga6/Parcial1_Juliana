@@ -13,7 +13,7 @@ def crear():
   contenido= content['content']
   resp= create_file(nombre, contenido)
   if not nombre:
-   return "no es posible crear el archivo", 400
+   return 400
   else:
     #return resp, 201
     return 201
