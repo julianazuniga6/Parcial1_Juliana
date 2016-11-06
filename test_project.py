@@ -1,8 +1,11 @@
 from python import crear, listado, eliminar_files, listar_recientes
-import flask
+from flask import Flask, abort, request
 
 app = Flask(__name__)
-app.test_request_context('/?filename=Pete&content=estavainafunciona')
+
+
+api_url = '/files'
+request.post(api_url, headers={'filename': 'content'}, data=json.dumps({'archivo': 'funciona'})
 
 
 #def func(x):
