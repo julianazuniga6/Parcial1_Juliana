@@ -36,7 +36,7 @@ def eliminar_files():
   return "SE ELIMINARON LOS ARCHIVOS DE filesystem_user", 200
 
 
-@app.route(api_url,methods=['POST'])
+@app.route(api_url+"/recently_created",methods=['POST'])
 def post_recent():
   return "NOT FOUND", 404
 
@@ -47,11 +47,11 @@ def listar_recientes():
   list["files"] = get_recientes()
   return json.dumps(list), 200
 
-@app.route(api_url,methods=['PUT'])
+@app.route(api_url+"/recently_created",methods=['PUT'])
 def put_recent():
   return "NOT FOUND", 404
 
-@app.route(api_url,methods=['DELETE'])
+@app.route(api_url+"/recently_created",methods=['DELETE'])
 def delete_recent():
   return "NOT FOUND", 404
 
