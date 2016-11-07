@@ -17,14 +17,17 @@ def crear():
   else:
     return resp, 201
 
-
-
 @app.route(api_url,methods=['GET'])
 def listado():
   list = {}
   list["files"] = get_all_files()
   #return "hello"
   return json.dumps(list), 200
+
+@app.route(api_url,methods=['PUT'])
+def put_files():
+  return "NOT FOUND", 404
+
 
 @app.route(api_url,methods=['DELETE'])
 def eliminar_files():
@@ -33,11 +36,24 @@ def eliminar_files():
   return "SE ELIMINARON LOS ARCHIVOS DE filesystem_user", 200
 
 
+@app.route(api_url,methods=['POST'])
+def post_recent():
+  return "NOT FOUND", 404
+
+
 @app.route(api_url+"/recently_created",methods=['GET'])
 def listar_recientes():
   list = {}
   list["files"] = get_recientes()
   return json.dumps(list), 200
+
+@app.route(api_url,methods=['PUT'])
+def put_recent():
+  return "NOT FOUND", 404
+
+@app.route(api_url,methods=['DELETE'])
+def delete_recent():
+  return "NOT FOUND", 404
 
 
 if __name__ == "__main__":
