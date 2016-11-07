@@ -23,7 +23,7 @@ def create_file(client):
 
 def test_create_file(client):
 	result= create_file(client)
-	assert result == "HTTP 201 CREATED- se creo el archivo", "Error creating file"
+	assert result == 'HTTP 201 CREATED- se creo el archivo', "Error creating file"
 
 
 
@@ -33,4 +33,4 @@ def delete_files(client):
 
 def test_delete_files(client):
 	result= delete_files(client)
-	assert result == "HTTP 200 OK- SE ELIMINARON LOS ARCHIVOS DE filesystem_user","Error deleting all files"
+	assert result == 'HTTP 200 OK- SE ELIMINARON LOS ARCHIVOS DE filesystem_user',"Error deleting all files"
