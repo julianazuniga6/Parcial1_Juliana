@@ -9,8 +9,10 @@ def client(request):
 def get_files(client):
 	return client.get('/files',follow_redirects=True)
 
-def test_get_users(client):
+def test_get_files(client):
 	result = get_files(client)
-	assert b'operativos' in result.data
+	assert b'200' in result.data
 
-
+def create_file(client):
+	response= client.post('/files', data=json.dumps(dict(filename = 'test_file', content= 'Archivo creado desde la prueba')), content_type='application/json')
+	assert b'201' in result.data
