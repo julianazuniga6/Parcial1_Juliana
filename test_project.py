@@ -11,6 +11,6 @@ def get_files(client):
 
 def test_get_users(client):
 	result = get_files(client)
-	assert b'operativos' in result.data
+	assert b'nuevo' in result.data
 
 
