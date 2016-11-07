@@ -14,7 +14,7 @@ def test_get_files(client):
 	assert b'200' in result.data
 
 def create_file(client):
-	return= client.post('/files', data=json.dumps(dict(filename = 'test_file', content= 'Archivo creado desde la prueba')), content_type='application/json')
+	return= client.post('/files', data=json.dumps(dict(filename = 'test_file', content= 'Archivo creado desde la prueba')), content_type='json')
 
 def test_create_file(client):
 	result= create_file(client)
