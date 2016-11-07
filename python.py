@@ -15,8 +15,8 @@ def crear():
   if not nombre:
    return 400
   else:
-    #return resp, 201
-    return 201
+    return resp, 201
+
 
 
 @app.route(api_url,methods=['GET'])
@@ -30,7 +30,7 @@ def listado():
 def eliminar_files():
   for file in get_all_files():
     eliminar_a(file)
-  return "HTTP 200 OK- SE ELIMINARON LOS ARCHIVOS DE filesystem_user", 200
+  return "SE ELIMINARON LOS ARCHIVOS DE filesystem_user", 200
 
 
 @app.route(api_url+"/recently_created",methods=['GET'])
