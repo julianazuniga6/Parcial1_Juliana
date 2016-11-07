@@ -12,18 +12,18 @@ def get_files(client):
 
 def test_get_files(client):
 	result = get_files(client)
-	assert b'200' in result
+	assert result.data != None, "Error getting file list"
 
 def create_file(client):
 	return client.post('/files',data=json.dumps(dict(filename='test_file',content='It is working')),content_type='application/json')
 
 def test_create_file(client):
 	result= create_file(client)
-	assert b'201' in result
+	assert result.status == "201 CREATED", "Error creating file"
 
 def delete_files(client):
 	return client.delete('/files',follow_redirects=True)
 
 def test_delete_files(client):
 	result= delete_files(client)
-	assert b'200' in result 
+	assert result.status == "200 OK","Error deleting all files"
